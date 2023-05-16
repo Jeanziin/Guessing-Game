@@ -1,7 +1,7 @@
 const randomNumber = Math.round(Math.random() * 10);
 let xAttempts = 1;
 
-function handleClick(event)
+function handleTryClick(event)
 {
     event.preventDefault();
 
@@ -13,22 +13,22 @@ function handleClick(event)
    
         document
         .querySelector(".screen2 h2")
-        .innerText = `Got it right in ${xAttempts} Attempts!!`;
+        .innerText = `Got it right in ${xAttempts} Attempts!`;
     }
 
+    inputNumber.value = "";
     xAttempts++;
     
 }
 
-function againClick(event)
-{
-    event.preventDefault();
-    const buttonNumber = document.querySelector("#buttonNumber");
-    if(buttonNumber) 
-    {
-        document.querySelector(".screen1").classList.remove("hide");
-        document.querySelector(".screen2").classList.add("hide");
-    }
-    
+//Eventos
 
-}
+const btnTry = document.querySelector("#btnTry");
+const btnReset = document.querySelector("#btnReset");
+
+btnTry.addEventListener('click', handleTryClick)
+btnReset.addEventListener('click',  ()=> {
+    document.querySelector(".screen1").classList.remove("hide");
+    document.querySelector(".screen2").classList.add("hide");
+    xAttempts = 1;
+})
