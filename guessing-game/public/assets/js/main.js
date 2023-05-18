@@ -10,6 +10,7 @@ let randomNumber;
 //Events
 btnTry.addEventListener("click", handleTryClick);
 btnReset.addEventListener("click", handleResetClick);
+document.addEventListener("keydown", handleEnterClick);
 
 //Functions 
 function generateRandomNumber() {
@@ -43,6 +44,14 @@ function handleResetClick() {
   toggleScreen();
   xAttempts = 0;
   randomNumber = generateRandomNumber();
+}
+
+function handleEnterClick(event)
+{
+    if(event.key == 'Enter')
+    {
+        handleResetClick();
+    }
 }
 
 // Initial setup
