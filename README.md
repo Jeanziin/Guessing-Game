@@ -31,4 +31,4 @@ The code consists of an HTML file (`index.html`) and a JavaScript file (`main.js
 
 
 ## Demo
-> A live demo of the BMI calculator can be [accessed here](relaxed-gingersnap-cdd8fc.netlify.app).
+> A live demo of the BMI calculator can be [accessed here](https://relaxed-gingersnap-cdd8fc.netlify.app).
